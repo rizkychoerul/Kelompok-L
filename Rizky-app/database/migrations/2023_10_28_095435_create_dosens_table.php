@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dosens', function (Blueprint $tdosen) {
-            $tdosen->id();
-            $tdosen->primary('nidn', 10);
-            $tdosen->string('nama', 50);
-            $tdosen->timestamps();
+        Schema::create('dosens', function (Blueprint $table) {
+            $table->char('nidn', 10)->primary();
+            $table->string('nama', 50);
+            $table->timestamp('received_at')->nullable();
+            $table->timestamps();
         });
     }
 

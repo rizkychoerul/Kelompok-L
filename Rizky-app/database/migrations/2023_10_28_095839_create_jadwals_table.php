@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jadwals', function (Blueprint $tjdw) {
-            $tjdw->id();
-            $tjdw->foreign('kode_matakuliah')->references('kode_matakuliah')->on('matakuliahs')->onDelete('cascade');;
-            $tjdw->char('nidn', 10);
-            $tjdw->char('kelas', 1);
-            $tjdw->string('hari', 10);
-            $tjdw->timestamps('jam');
+        Schema::create('jadwals', function (Blueprint $table) {
+            $table->unsignedBigInteger('id');
+            $table->char('kode_matakuliah', 8);
+            $table->char('nidn', 10);
+            $table->foreign('kode_matakuliah')->references('kode_matakuliah')->on('matakuliahs');
+            $table->foreign('nidn')->references('nidn')->on('dosens');
+            $table->char('kelas', 1);
+            $table->string('hari', 10);
+            $table->timestamp('jam');
+            $table->timestamps();
         });
     }
 

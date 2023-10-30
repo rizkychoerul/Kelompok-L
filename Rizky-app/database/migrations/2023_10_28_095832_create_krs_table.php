@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('krs', function (Blueprint $tkrs) {
-            $tkrs->id();
-            $tkrs->foreign('npm')->references('npm')->on('mahasiswas')->onDelete('cascade');
-            $tkrs->foreign('kode_matakuliah')->references('kode_matakuliah')->on('matakuliahs')->onDelete('cascade');;
-            $tkrs->timestamps();
+        Schema::create('krs', function (Blueprint $table) {
+            $table->id();
+            $table->char('npm', 10);
+            $table->char('kode_matakuliah', 8);
+            $table->foreign('npm', 10)->references('npm')->on('mahasiswas');
+            $table->foreign('kode_matakuliah', 8)->references('kode_matakuliah')->on('matakuliahs');
+            $table->timestamps();
         });
     }
 

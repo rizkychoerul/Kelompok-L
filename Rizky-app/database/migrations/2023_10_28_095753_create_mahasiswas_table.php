@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mahasiswas', function (Blueprint $tmhs) {
-            $tmhs->id();
-            $tmhs->primary('npm', 10);
-            $tmhs->foreign('nidn')->references('nidn')->on('dosens')->onDelete('cascade');;
-            $tmhs->string('nama', 50);
-            $tmhs->timestamps();
+        Schema::create('mahasiswas', function (Blueprint $table) {
+            $table->char('npm', 10)->primary();
+            $table->char('nidn', 10);
+            $table->string('nama', 50);
+            $table->timestamp('arrived_at');
+            $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('nidn')->references('nidn')->on('dosens');
         });
     }
 

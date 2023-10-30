@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/Project-kelompok', function () {
+Route::get('/', function () {
     return view('Main');
 });
 
