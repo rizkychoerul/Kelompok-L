@@ -16,7 +16,8 @@
             {{-- Header --}}
             @include('Header')
             
-        <div class="flex flex-row box-border border-black border-2">
+        <div class="flex flex-row">
+            
             {{-- Sidebar --}}
             @include('Sidebar')
             
@@ -24,43 +25,15 @@
                 
                 <div class="m-4 font-lora text-xl mb-20">Home</div>
 
-                <div class="mx-80 w-2/4 h-96 bg-slate-50">
-
-                    <div>Tombol</div>
-
-                    <hr class="my-5 border border-black">
-
-                    <table class="table-auto border-collapse border border-slate-500 w-auto h-auto">
-                        <thead>
-                            <tr>
-                                <th class="border border-slate-600">No</th>
-                                <th class="border border-slate-600">Foto</th>
-                                <th class="border border-slate-600">Username</th>
-                                <th class="border border-slate-600">Email</th>
-                                <th class="border border-slate-600">Nama</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-slate-600">1</td>
-                                <td class="border border-slate-600">-</td>
-                                <td class="border border-slate-600">Rizky</td>
-                                <td class="border border-slate-600">rizky@gmail.com</td>
-                                <td class="border border-slate-600">Rizky Choerul</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-slate-600">2</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-slate-600">3</td>
-                            </tr>
-                        </tbody>
-                    </table>    
-                </div>
+                {{-- Content --}}
+                @include('Content')
             
             </div>
 
         </div>
+
+        {{-- Footer --}}
+        @include('Footer')
 
         </div>
 
