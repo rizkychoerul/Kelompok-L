@@ -21,7 +21,7 @@
                         <td class="border border-slate-600">1</td>
                         <td class="border border-slate-600">-</td>
                         <td class="border border-slate-600">Rizky</td>
-                        <td class="border border-slate-600">rizky@gmail.com</td>
+                        <td class="border border-slate-600">rizkyc@gmail.com</td>
                         <td class="border border-slate-600">Rizky Choerul</td>
                     </tr>
                     <tr>
@@ -34,9 +34,9 @@
                     <tr>
                         <td class="border border-slate-600">3</td>
                         <td class="border border-slate-600">-</td>
-                        <td class="border border-slate-600">Rizki</td>
-                        <td class="border border-slate-600">rizki@gmail.com</td>
-                        <td class="border border-slate-600">Rizki Hartono</td>
+                        <td class="border border-slate-600">Rizky</td>
+                        <td class="border border-slate-600">rizkyh@gmail.com</td>
+                        <td class="border border-slate-600">Rizky Hartono</td>
                     </tr>
                     <tr>
                         <td class="border border-slate-600">4</td>
