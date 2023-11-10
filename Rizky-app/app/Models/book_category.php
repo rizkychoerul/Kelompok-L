@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class categories extends Model
+class book_category extends Model
 {
     use HasFactory;
-
-    protected $primaryKey = [
-        'id'
-    ];
 
     public function books(): BelongsToMany
     {
