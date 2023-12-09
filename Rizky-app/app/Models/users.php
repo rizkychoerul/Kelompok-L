@@ -14,6 +14,10 @@ class users extends Model
         'id'
     ];
 
+    protected $guarded = [
+        'id'
+    ];
+
     public function loans(): HasMany
     {
         return $this->hasMany(loans::class);

@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Livewire\Forms\LoginForm;
 use Illuminate\Database\Seeder;
 use App\Models\users;
 
@@ -22,9 +24,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             user::class,
-            category::class,
-            bookshelf::class,
-            book::class,
+            // category::class,
+            // bookshelf::class,
+            // book::class,
+            // LoginformSeeder::class
         ]);
     }
 }

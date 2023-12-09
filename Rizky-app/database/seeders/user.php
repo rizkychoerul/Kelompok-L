@@ -15,24 +15,28 @@ class user extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        
-        $faker = Faker::create('id_ID');
-
-        for ($i = 0; $i < 10 ; $i++) { 
-            
+    {       
             DB::table('users')->insert([
-                'username' => $faker->firstName(),
-                'name' => $faker->name(),
-                'email' => $faker->email(),
-                'email_verified_at' => now(),
-                'password' => $faker->uuid(),
-                'remember_token' => $faker->numerify(),
-                'created_at' => now(),
-                'updated_at' => now(),
+                [
+                    'username' => 'Rizky',
+                    'name' => 'Rizky Choerul',
+                    'email' => 'rcf2512@gmail.com',
+                    'email_verified_at' => now(),
+                    'password' => Hash::make('rizky2512'),
+                    'remember_token' => rand(100,500),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ], 
+                [
+                    'username' => 'Admin',
+                    'name' => 'Admin',
+                    'email' => 'admin@gmail.com',
+                    'email_verified_at' => now(),
+                    'password' => Hash::make('admin1234'),
+                    'remember_token' => rand(100,500),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]
             ]);
-        
-        }
-
     }
 }

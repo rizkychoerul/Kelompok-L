@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lecturers', function (Blueprint $table) {
-            $table->char('nidn', 10)->primary();
-            $table->string('nama', 50);
-            $table->timestamp('received_at')->nullable();
+        Schema::create('loginforms', function (Blueprint $table) {
+            $table->id();
+            $table->string('Email')->unique();
+            $table->string('Password')->unique();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lecturers');
+        Schema::dropIfExists('loginforms');
     }
 };
