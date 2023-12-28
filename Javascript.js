@@ -276,7 +276,15 @@ var arr = [
     "Rizky",
     "Aldy",
     "Azril",
+    "Reza",
     "Ivan"
+];
+var arr2 = [
+    1,
+    3,
+    2,
+    5,
+    4
 ];
 // -> 1. Join
 // console.log(arr.join());
@@ -294,5 +302,33 @@ var arr = [
 // console.log(arr.join());
 
 // -> 5. Shift
-arr.shift();
-console.log(arr.join());
+// arr.shift();
+// console.log(arr.join());
+
+// -> 6. Splice(first index, delete/no, add 1 or more)
+// arr.splice(2, 0, 'Reza');
+// console.log(arr.join());
+
+// -> 7. Slice(first index, last index)
+// var arr2 = arr.slice(1, 3);
+// console.log(arr.join());
+// console.log(arr2.join());
+
+// -> 8. ForEach
+// arr.forEach(function(elm) { // 1 version ForEach
+//     console.log(elm);
+// });
+
+// arr.forEach(function(elm, num) { // 2 version ForEach
+//     console.log("Mahasiswa Ke " + (num+1) + " adalah " + elm);
+// });
+
+// -> 9. Map
+// var arr3 = arr2.map(function(num) {
+//     return num * 2;
+// });
+// console.log(arr3.join());
+
+// -> 10. Sort
+var arr3 = arr2.sort();
+console.log(arr3.join());
